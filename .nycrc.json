@@ -1,0 +1,29 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "sourceMap": true,
+	"instrument": true,
+  "check-coverage": true,
+  "all": true,
+  "extension": [
+    ".ts"
+  ],
+  "include": [
+    "src/**/!(*.test.*).ts"
+  ],
+  "exclude": [
+    "src/_tests_/**/*.*",
+    "src/public/**/*.*",
+    "src/app/**/*.*",
+    "src/middlewares/validate-routes.middleware.ts"
+  ],
+  "reporter": [
+    "lcov",
+    "text-summary"
+  ],
+  "temp-dir": ".nyc_output",
+  "report-dir": "coverage",
+  "branches": 85,
+	"lines": 90,
+	"functions": 90,
+	"statements": 90
+}

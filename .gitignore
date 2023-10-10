@@ -1,0 +1,40 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+.nyc_output
+.scannerwork
+/coverage
+
+# production
+/build
+/dist
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+#.development.env
+
+package-lock.json
+pnpm-lock.yaml
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+src/public/bundle.js
+src/public/*.bundle.js
+
+# images svg
+src/public/*.svg
+src/public/*.png
+src/public/images/*.png
+src/public/images/*.svg
+
+*.hot-update.js*
+*.hot-update.json*

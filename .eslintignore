@@ -1,0 +1,16 @@
+# Ignore artifacts:
+build
+dist
+coverage
+.scannerwork
+.nyc_output
+doc-md
+
+# Ignore all HTML files:
+*.html
+
+.gitignore
+.prettierignore
+.nyc_output
+node_modules
+src/public

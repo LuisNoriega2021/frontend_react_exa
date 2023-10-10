@@ -1,0 +1,87 @@
+{
+	"compilerOptions": {
+		"target": "ES2020",
+		"module": "CommonJS",
+		"sourceMap": false,
+		"outDir": "dist",
+
+		"strict": true,
+
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+
+		"lib": ["es5", "es6", "es7", "es2017", "dom"],
+		"jsx": "react",
+		"allowJs": true,
+		"rootDirs": ["src"],
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noImplicitAny": true,
+		"strictNullChecks": false,
+
+		"suppressImplicitAnyIndexErrors": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": false,
+		"allowSyntheticDefaultImports": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"declaration": false,
+		"removeComments": true,
+		"preserveConstEnums": true,
+		"baseUrl": "src",
+		"paths": {
+			"app/*": ["app/*"],
+			"components/*": ["app/_components/*"],
+			"configs/*": ["configs/*"],
+			"constants/*": ["constants/*"],
+			"controllers/*": ["controllers/*"],
+			"db/*": ["db/*"],
+			"helpers/*": ["helpers/*"],
+			"interfaces/*": ["interfaces/*"],
+			"middlewares/*": ["middlewares/*"],
+			"models/*": ["models/*"],
+			"routes/*": ["routes/*"],
+			"services/*": ["services/*"],
+			"utils/*": ["utils/*"]
+		},
+
+		"useUnknownInCatchVariables": true,
+
+		"resolveJsonModule": true,
+
+		"plugins": [
+			{
+				"name": "typescript-tslint-plugin"
+			}
+		],
+		"typeRoots": ["./node_modules/@types", "src/types", "./src/app/@types"]
+	},
+	"include": ["src/**/*", "index.d.ts"],
+	"exclude": [
+		"node_modules",
+		"./node_modules/*",
+		"**/node_modules/*",
+		"dist",
+		"typings/browser.d.ts",
+		"typings/browser",
+		"src/app",
+		"tests",
+		"coverage"
+	],
+	"watchOptions": {
+		"excludeDirectories": [
+			"node_modules",
+			"./node_modules/*",
+			"**/node_modules/*",
+			"dist",
+			"typings/browser.d.ts",
+			"typings/browser",
+			"src/app",
+			"tests",
+			"coverage"
+		]
+	}
+}

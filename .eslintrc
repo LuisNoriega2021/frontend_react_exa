@@ -1,0 +1,51 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"extends": [
+		// "eslint:recommended",
+		"plugin:react/recommended", // agregar el plugin de reactjs para eslint
+		"plugin:@typescript-eslint/recommended",
+		"plugin:sonarjs/recommended",
+		// "plugin:prettier/recommended", // agregar el plugin que integra eslint con prettier
+		// "prettier/@typescript-eslint",  // agrega las reglas de prettier a eslint
+		"prettier"
+	],
+	"plugins": ["prettier", "sonarjs"],
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true // permite a eslint analizar los archivos jsx o tsx
+		}
+	},
+	"ignorePatterns": [],
+	"rules": {
+		// Aca puedes modificar alguna regla específica, por ejemplo:
+		"no-plusplus": "off",
+		"linebreak-style": 0,
+		"max-len": [
+			"error",
+			{
+				"code": 120,
+				"tabWidth": 2,
+				"comments": 500,
+				//"ignorePattern": true,
+				"ignoreComments": true,
+				"ignoreTrailingComments": true,
+				"ignoreUrls": true,
+				"ignoreStrings": true,
+				"ignoreTemplateLiterals": true,
+				"ignoreRegExpLiterals": true
+			}
+		],
+
+		"react/destructuring-assignment": 0,
+		"@typescript-eslint/no-unused-vars": ["error", { "ignoreRestSiblings": true }],
+		"react/jsx-indent": ["error", "tab"],
+		"react/jsx-indent-props": ["error", "tab"]
+	},
+	"settings": {
+		"react": {
+			"version": "detect" // para detectar la versión de reactjs
+		}
+	}
+}
